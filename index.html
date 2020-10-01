@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ACTRA Payroll Calculator</title>
+    <meta name="ACTRA Payroll Calculator MKI" content="Calculator for payroll.">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./Assets/actra_logo.jpg"/>
+    </header>
+
+    <main>
+      <h1>
+        PAYROLL CALCULATOR
+      </h1>
+
+      <form>
+        <label for="agents" class="bold">AGENTS</label><br>
+        <select id="agents">
+          <option>SELECT AN AGENT</option>
+        </select><br>
+        
+        
+        <label for="start-time" class="bold">START TIME</label>
+        <input type="time" id="start-time" required/>
+        <label for="end-time" class="bold">WRAP</label>
+        <input type="time" id="end-time" required/>
+        
+        <label for="lunch-start-time" class="bold">LUNCH START TIME</label>
+        <input type="time" id="lunch-start-time"/>
+        <label for="lunch-end-time" class="bold">LUNCH END TIME</label>
+        <input type="time" id="lunch-end-time"/>
+        
+        <label for="travel-hours" class="bold">HOURS OF TRAVEL</label>
+        <input type="number" id="travel-hours" value="0" min="0" required/>
+        
+        <label for="HST" class="bold">HST COLLECTED</label>
+        <input type="checkbox" name="HST" value="HST"/>
+        <label for="fitting" class="bold">FITTING</label>
+        <input type="checkbox" name="fitting" value="fitting"/>
+        <label for="cspecialty" class="bold">CAR/SPECIALTY WARDROBE ITEM</label>
+        <input type="checkbox" name="cspecialty" value="cspecialty"/>
+        
+        <button type="submit" id="submit-data">Calculate</button>
+      </form>
+      
+      <section class="result">
+        <p id="hours-worked"></p>
+        <p id="lunch-hours"></p>
+      </section>
+    </main>
+
+    <footer>
+      Made by Brandon Elefano
+    </footer>
+
+  </body>
+</html>
